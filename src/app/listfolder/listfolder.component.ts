@@ -10,6 +10,11 @@ export class ListfolderComponent implements OnInit {
   imgFolder: string = '../../assets/folder.png'
   imgArrow: string = '../../assets/down-arrow.png'
   imgFile: string = '../../assets/file.png'
+  isVisible:boolean = true;
+  openFolder(){
+    this.isVisible = !this.isVisible
+
+  }
   ngOnInit(): void {
   }
 

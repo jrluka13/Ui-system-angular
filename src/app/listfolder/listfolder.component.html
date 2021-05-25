@@ -2,12 +2,15 @@
   <ul>
     <li class="folder">
       <span class="list_block_folder">
-        <img class="arrow" [src]="imgArrow" alt="arrow" >
+        <img  [ngClass]="{
+        rotate: isVisible
+        }" class="arrow" [src]="imgArrow" alt="arrow" (click)="openFolder()">
         <img [src]="imgFolder" alt="folder" >
         {{data.folderName}}
       </span>
     </li>
-    <li class="file" *ngFor="let file of data.arrFileName">
+    <li class="file" [ngClass]="{mapping: isVisible}"
+        *ngFor="let file of data.arrFileName">
       <span class="list_block_file">
          <img [src]="imgFile" alt="file" >
         {{file}}
