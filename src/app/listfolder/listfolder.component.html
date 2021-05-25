@@ -10,11 +10,13 @@
       </span>
     </li>
     <li class="file" [ngClass]="{mapping: isVisible}"
-        *ngFor="let file of data.arrFileName">
+        *ngFor="let data of data.arrData">
       <span class="list_block_file">
          <img [src]="imgFile" alt="file" >
-        {{file}}
+        {{data.file}}}
+
       </span>
+
     </li>
   </ul>
 </div>

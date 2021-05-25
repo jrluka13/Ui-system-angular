@@ -1,13 +1,25 @@
 export const FILES_STRUCTURE = [
   {
     "folderName":"Home",
-    "arrFileName":[
-      "awdawd.txt",
-      "awdawd.txt"
+    "arrData":[
+      {file:"awdawd.txt"},
+      {file:"awdawd.txt"},
+      {folder: {
+          "folderName":"Home",
+          "arrData":[
+          {file:"awdawd.txt"},
+          {file:"awdawd.txt"},
+        ]
+      }
+      }
+
     ]
   },
   {
     "folderName":"Test",
-    "arrFileName":["awdawd.txt","awdawd.txt"]
+    "arrData":[
+      {file:"awdawd.txt"},
+      {file:"awdawd.txt"},
+    ]
   }
 ]
