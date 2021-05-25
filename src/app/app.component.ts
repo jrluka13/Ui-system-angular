@@ -12,13 +12,11 @@ export interface objData{
 })
 export class AppComponent {
 
-  arr:objData[]
+  arr!:objData[]
 
 
   constructor(private readFileService: ReadfFileService ) {
-    let obj = readFileService.readFile();
-    // @ts-ignore
-    this.arr = obj['default'];
+    this.arr = readFileService.readFile();
     console.log(this.arr)
   }
 
