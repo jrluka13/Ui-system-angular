@@ -2,13 +2,14 @@
   <ul>
     <li class="folder">
       <span class="list_block_folder">
-        <img class="arrow" [src]="imgArrow" alt="folder" >
+        <img class="arrow" [src]="imgArrow" alt="arrow" >
         <img [src]="imgFolder" alt="folder" >
         {{data.folderName}}
       </span>
     </li>
     <li class="file" *ngFor="let file of data.arrFileName">
       <span class="list_block_file">
+         <img [src]="imgFile" alt="file" >
         {{file}}
       </span>
     </li>
