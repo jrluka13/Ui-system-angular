@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {ReadfFileService} from "./services/readfFile.service";
+export interface objData{
+  folderName:string,
+  arrFileName:Array<string>
+}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ui-system';
+
+  arr:objData[]
+
+
+  constructor(private readFileService: ReadfFileService ) {
+    let obj = readFileService.readFile();
+    // @ts-ignore
+    this.arr = obj['default'];
+    console.log(this.arr)
+  }
+
 }
