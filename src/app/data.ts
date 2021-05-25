@@ -2,12 +2,12 @@ export const FILES_STRUCTURE = [
   {
     "folderName":"Home",
     "arrFileName":[
-      "awdawd",
-      "awdawd"
+      "awdawd.txt",
+      "awdawd.txt"
     ]
   },
   {
     "folderName":"Test",
-    "arrFileName":["awdawd","awdawd"]
+    "arrFileName":["awdawd.txt","awdawd.txt"]
   }
 ]

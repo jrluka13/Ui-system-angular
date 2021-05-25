@@ -1,1 +1,16 @@
-<p>listfolder works!</p>
+<div class="list_block">
+  <ul>
+    <li class="folder">
+      <span class="list_block_folder">
+        <img class="arrow" [src]="imgArrow" alt="folder" >
+        <img [src]="imgFolder" alt="folder" >
+        {{data.folderName}}
+      </span>
+    </li>
+    <li class="file" *ngFor="let file of data.arrFileName">
+      <span class="list_block_file">
+        {{file}}
+      </span>
+    </li>
+  </ul>
+</div>

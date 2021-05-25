@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {ReadfFileService} from "./services/readfFile.service";
 export interface objData{
   folderName:string,
   arrFileName:Array<string>
@@ -12,12 +11,6 @@ export interface objData{
 })
 export class AppComponent {
 
-  arr!:objData[]
 
-
-  constructor(private readFileService: ReadfFileService ) {
-    this.arr = readFileService.readFile();
-    console.log(this.arr)
-  }
 
 }
