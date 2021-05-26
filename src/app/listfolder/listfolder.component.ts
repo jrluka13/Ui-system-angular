@@ -11,12 +11,21 @@ export class ListfolderComponent implements OnInit {
   imgArrow: string = '../../assets/down-arrow.png'
   imgFile: string = '../../assets/file.png'
   isVisible:boolean = true;
-  openFolder(){
+  toggle:boolean = true;
+  openFirstFolder(){
     this.isVisible = !this.isVisible
 
   }
 
-
+  openFolder(arrow:any){
+    this.toggle = !this.toggle
+    if(arrow.style.transform!='rotate(270deg)'){
+      arrow.style.transform = 'rotate(270deg)'
+    }else{
+      arrow.style.transform = 'rotate(0deg)'
+    }
+    console.log(arrow.style)
+  }
   ngOnInit(): void {
   }
 

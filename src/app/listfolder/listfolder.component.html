@@ -1,28 +1,31 @@
 <div class="list_block">
   <ul>
-    <li class="folder">
+    <li class="folder" *ngIf="data.hasOwnProperty('children')">
       <span class="list_block_folder">
         <img  [ngClass]="{
         rotate: isVisible
-        }" class="arrow" [src]="imgArrow" alt="arrow" (click)="openFolder()">
+        }" class="arrow" [src]="imgArrow" alt="arrow" (click)="openFirstFolder()">
         <img [src]="imgFolder" alt="folder" >
         {{data.name}}
       </span>
     </li>
-    <li class="file" [ngClass]="{mapping: isVisible}"
-        *ngFor="let data of data.children">
-      <div class="list_block_file" *ngIf="data.hasOwnProperty('children');else elseBlock">
-         <img style="cursor: pointer; transform: rotate(270deg)" [src]="imgArrow" alt="arrow" >
-        <img [src]="imgFolder" style="margin-left: 10px" alt="folder" >
-        {{data.name}}
-      </div>
-      <ng-template #elseBlock>
-        <div class="list_block_file">
-          <img [src]="imgFile" alt="file" >
-          {{data.name}}
+    <ul *ngIf="data.hasOwnProperty('children')">
+      <li class="data" [ngClass]="{mapping: isVisible}"
+          *ngFor="let l of data.children">
+        <div class="list_block_file_folder" *ngIf="l.hasOwnProperty('children');else elseBlock">
+          <app-listfolder
+            *ngFor="let item of data.children" [data]="item"
+          ></app-listfolder>
         </div>
-      </ng-template>
+        <ng-template #elseBlock>
+          <div class="list_block_file">
+            <img [src]="imgFile" alt="file" >
+            {{l.name}}
+          </div>
+        </ng-template>
 
-    </li>
+      </li>
+    </ul>
+
   </ul>
 </div>
