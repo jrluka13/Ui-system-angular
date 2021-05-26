@@ -6,16 +6,22 @@
         rotate: isVisible
         }" class="arrow" [src]="imgArrow" alt="arrow" (click)="openFolder()">
         <img [src]="imgFolder" alt="folder" >
-        {{data.folderName}}
+        {{data.name}}
       </span>
     </li>
     <li class="file" [ngClass]="{mapping: isVisible}"
-        *ngFor="let data of data.arrData">
-      <span class="list_block_file">
-         <img [src]="imgFile" alt="file" >
-        {{data.file}}}
-
-      </span>
+        *ngFor="let data of data.children">
+      <div class="list_block_file" *ngIf="data.hasOwnProperty('children');else elseBlock">
+         <img style="cursor: pointer; transform: rotate(270deg)" [src]="imgArrow" alt="arrow" >
+        <img [src]="imgFolder" style="margin-left: 10px" alt="folder" >
+        {{data.name}}
+      </div>
+      <ng-template #elseBlock>
+        <div class="list_block_file">
+          <img [src]="imgFile" alt="file" >
+          {{data.name}}
+        </div>
+      </ng-template>
 
     </li>
   </ul>

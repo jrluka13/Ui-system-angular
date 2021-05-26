@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 export interface objData{
-  folderName:string,
-  arrData:Array<any>
+  name:string,
+  children?:objData[]
 }
 
 @Component({
