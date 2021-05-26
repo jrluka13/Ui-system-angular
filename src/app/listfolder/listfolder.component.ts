@@ -17,15 +17,6 @@ export class ListfolderComponent implements OnInit {
 
   }
 
-  openFolder(arrow:any){
-    this.toggle = !this.toggle
-    if(arrow.style.transform!='rotate(270deg)'){
-      arrow.style.transform = 'rotate(270deg)'
-    }else{
-      arrow.style.transform = 'rotate(0deg)'
-    }
-    console.log(arrow.style)
-  }
   ngOnInit(): void {
   }
 
