@@ -7,6 +7,7 @@ import {objData} from "../app.component";
 })
 export class ListfolderComponent implements OnInit {
   @Input() data!:objData
+
   imgFolder: string = '../../assets/folder.png'
   imgArrow: string = '../../assets/down-arrow.png'
   imgFile: string = '../../assets/file.png'

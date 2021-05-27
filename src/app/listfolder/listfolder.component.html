@@ -1,6 +1,6 @@
 <div class="list_block">
-  <ul>
-    <li class="folder" *ngIf="data.hasOwnProperty('children')">
+  <ul *ngIf="data.hasOwnProperty('children')">
+    <li class="folder" >
       <span class="list_block_folder">
         <img  [ngClass]="{
         rotate: isVisible
@@ -9,13 +9,12 @@
         {{data.name}}
       </span>
     </li>
-    <ul *ngIf="data.hasOwnProperty('children')">
       <li class="data" [ngClass]="{mapping: isVisible}"
           *ngFor="let l of data.children">
         <div class="list_block_file_folder" *ngIf="l.hasOwnProperty('children');else elseBlock">
-          <app-listfolder
-            *ngFor="let item of data.children" [data]="item"
-          ></app-listfolder>
+            <app-listfolder
+               [data]="l"
+            ></app-listfolder>
         </div>
         <ng-template #elseBlock>
           <div class="list_block_file">
@@ -23,9 +22,7 @@
             {{l.name}}
           </div>
         </ng-template>
-
       </li>
     </ul>
 
-  </ul>
 </div>

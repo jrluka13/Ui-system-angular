@@ -10,7 +10,7 @@ export const FILES_STRUCTURE = [
           {name:'reewfwe'},
           {name:'awdawdwd'}
         ]
-      },
+      }
 
     ]
   },
@@ -33,6 +33,7 @@ export const FILES_STRUCTURE = [
         ]
       },
       {name: 'Banana'},
+
 
     ]
   },
