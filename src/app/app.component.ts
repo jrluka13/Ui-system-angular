@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 export interface objData{
   name:string,
+  type:string,
   children?:objData[]
 }
 
@@ -9,8 +10,4 @@ export interface objData{
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-
-
-
-}
+export class AppComponent {}

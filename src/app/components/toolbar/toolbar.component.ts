@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ReadfFileService} from "../services/readfFile.service";
-import {objData} from "../app.component";
+import {ReadfFileService} from "../../services/readfFile.service";
+import {Folder} from "../../interfaces/Folder";
 
 @Component({
   selector: 'app-toolbar',
@@ -8,14 +8,9 @@ import {objData} from "../app.component";
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-
-
-  arr!:objData[]
-
-
+  arr!:Folder[]
   constructor(private readFileService: ReadfFileService ) {
     this.arr = readFileService.readFile();
-    console.log(this.arr)
   }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 <div class="list_block">
-  <ul *ngIf="data.hasOwnProperty('children')">
+  <ul *ngIf="data.type === folder">
     <li class="folder" >
       <span class="list_block_folder">
         <img  [ngClass]="{
@@ -11,7 +11,7 @@
     </li>
       <li class="data" [ngClass]="{mapping: isVisible}"
           *ngFor="let l of data.children">
-        <div class="list_block_file_folder" *ngIf="l.hasOwnProperty('children');else elseBlock">
+        <div class="list_block_file_folder" *ngIf="l.type === folder;else elseBlock">
             <app-listfolder
                [data]="l"
             ></app-listfolder>
