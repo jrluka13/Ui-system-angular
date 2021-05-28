@@ -13,6 +13,4 @@ export class ToolbarComponent {
     this.arr = readFileService.readFile();
   }
 
-
-
 }

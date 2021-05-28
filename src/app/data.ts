@@ -1,4 +1,4 @@
-import {Types} from "./Enums/Types";
+import { Types } from './enums/Types';
 
 export const FILES_STRUCTURE = [
   {
@@ -7,27 +7,27 @@ export const FILES_STRUCTURE = [
     children: [
       {
         name: 'Apple',
-        type: Types.file
+        type: Types.file,
       },
       {
         name: 'Banana',
-        type: Types.file
+        type: Types.file,
       },
       {
         name: 'Fruit loops',
         type: Types.folder,
         children: [
           {
-            name:'reewfwe',
-            type:Types.file
+            name: 'reewfwe',
+            type: Types.file,
           },
           {
-            name:'awdawdwd',
-            type:Types.file
-          }
-        ]
-      }
-    ]
+            name: 'awdawdwd',
+            type: Types.file,
+          },
+        ],
+      },
+    ],
   },
   {
     name: 'Vegetables',
@@ -39,36 +39,36 @@ export const FILES_STRUCTURE = [
         children: [
           {
             name: 'Broccoli',
-            type:Types.file
+            type: Types.file,
           },
           {
             name: 'Brussels',
-            type:Types.file
+            type: Types.file,
           },
           {
             name: 'Brussels',
-            type:Types.file
+            type: Types.file,
           },
-        ]
+        ],
       },
       {
         name: 'Orange',
-        type:Types.folder,
+        type: Types.folder,
         children: [
           {
             name: 'Pumpkins',
-            type:Types.file
+            type: Types.file,
           },
           {
             name: 'Carrots',
-            type:Types.file
+            type: Types.file,
           },
-        ]
+        ],
       },
       {
         name: 'Banana',
-        type:Types.file
-      }
-    ]
+        type: Types.file,
+      },
+    ],
   },
 ];
