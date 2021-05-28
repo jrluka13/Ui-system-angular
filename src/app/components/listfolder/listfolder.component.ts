@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Folder } from '../../interfaces/Folder';
-import { Types } from '../../enums/Types';
+import { FileSystemItemTypes } from '../../enums/FileSystemItemTypes';
+
 @Component({
   selector: 'app-listfolder',
   templateUrl: './listfolder.component.html',
@@ -9,8 +10,8 @@ import { Types } from '../../enums/Types';
 export class ListfolderComponent {
   @Input() data!: Folder;
 
-  folder: string = Types.folder;
-  file: string = Types.file;
+  folder = FileSystemItemTypes.folder;
+  file = FileSystemItemTypes.file;
   imgFolder: string = '../../assets/folder.png';
   imgArrow: string = '../../assets/down-arrow.png';
   imgFile: string = '../../assets/file.png';

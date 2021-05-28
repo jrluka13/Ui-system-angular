@@ -3,7 +3,6 @@
   "ignorePatterns": [
     "projects/**/*"
   ],
-
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint"
@@ -20,12 +19,19 @@
     ],
     "no-return-assign": "off",
     "lines-between-class-members": [
-      "error", "always", {
-      "exceptAfterSingleLine": true
-    }],
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
     "no-multiple-empty-lines": [
-      "error", {
-        "max": 1, "maxBOF": 0}],
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 0
+      }
+    ],
     "padding-line-between-statements": [
       "error",
       {
@@ -36,17 +42,23 @@
       {
         "blankLine": "always",
         "prev": [
-          "const", "let", "var"
+          "const",
+          "let",
+          "var"
         ],
         "next": "*"
       },
       {
         "blankLine": "any",
         "prev": [
-          "const", "let", "var"
+          "const",
+          "let",
+          "var"
         ],
         "next": [
-          "const", "let", "var"
+          "const",
+          "let",
+          "var"
         ]
       },
       {
@@ -65,10 +77,12 @@
       {
         "blankLine": "any",
         "prev": [
-          "export", "import"
+          "export",
+          "import"
         ],
         "next": [
-          "export", "import"
+          "export",
+          "import"
         ]
       }
     ],
@@ -77,14 +91,19 @@
     "prefer-destructuring": "off",
     "class-methods-use-this": "off",
     "no-empty": [
-      "error", {
-        "allowEmptyCatch": true}],
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
     "func-names": "off",
     "no-unused-expressions": [
-      "error", {
-      "allowShortCircuit": true,
-      "allowTernary": true
-    }],
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
     "no-unused-vars": "off",
     "no-unexpected-multiline": [
       "error"
@@ -92,9 +111,11 @@
     // prettier issue https://github.com/prettier/prettier/issues/3806
     "operator-linebreak": "off",
     "@typescript-eslint/explicit-member-accessibility": [
-      "error", {
-      "accessibility": "no-public"
-    }],
+      "error",
+      {
+        "accessibility": "no-public"
+      }
+    ],
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/typedef": [
       "off"
@@ -103,43 +124,49 @@
       "error"
     ],
     "@typescript-eslint/no-unused-vars": "off",
-//    "@typescript-eslint/no-unused-vars-experimental": 1, // 1 = warning
+    //    "@typescript-eslint/no-unused-vars-experimental": 1, // 1 = warning
     "@typescript-eslint/consistent-type-assertions": [
-      "error", {
-      "assertionStyle": "angle-bracket"
-    }],
+      "error",
+      {
+        "assertionStyle": "angle-bracket"
+      }
+    ],
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-use-before-define": [
-      "error", {
-      "functions": false
-    }],
+      "error",
+      {
+        "functions": false
+      }
+    ],
     "@typescript-eslint/member-ordering": [
-      "error", {
-      "default": [
-        "public-abstract-field",
-        "protected-abstract-field",
-        "private-abstract-field",
-        "public-static-field",
-        "protected-static-field",
-        "private-static-field",
-        "public-instance-field",
-        "protected-instance-field",
-        "private-instance-field",
-        "public-constructor",
-        "protected-constructor",
-        "private-constructor",
-        "public-static-method",
-        "protected-static-method",
-        "private-static-method",
-        "public-abstract-method",
-        "protected-abstract-method",
-        "private-abstract-method",
-        "public-instance-method",
-        "protected-instance-method",
-        "private-instance-method"
-      ]
-    }]
+      "error",
+      {
+        "default": [
+          "public-abstract-field",
+          "protected-abstract-field",
+          "private-abstract-field",
+          "public-static-field",
+          "protected-static-field",
+          "private-static-field",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-static-method",
+          "protected-static-method",
+          "private-static-method",
+          "public-abstract-method",
+          "protected-abstract-method",
+          "private-abstract-method",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ]
   },
   "overrides": [
     {
@@ -158,7 +185,6 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-
         "@angular-eslint/directive-selector": [
           "error",
           {

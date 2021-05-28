@@ -1,29 +1,29 @@
-import { Types } from './enums/Types';
+import {FileSystemItemTypes} from './enums/FileSystemItemTypes';
 
 export const FILES_STRUCTURE = [
   {
     name: 'Fruit',
-    type: Types.folder,
+    type: FileSystemItemTypes.folder,
     children: [
       {
         name: 'Apple',
-        type: Types.file,
+        type: FileSystemItemTypes.file,
       },
       {
         name: 'Banana',
-        type: Types.file,
+        type: FileSystemItemTypes.file,
       },
       {
         name: 'Fruit loops',
-        type: Types.folder,
+        type: FileSystemItemTypes.folder,
         children: [
           {
             name: 'reewfwe',
-            type: Types.file,
+            type: FileSystemItemTypes.file,
           },
           {
             name: 'awdawdwd',
-            type: Types.file,
+            type: FileSystemItemTypes.file,
           },
         ],
       },
@@ -31,43 +31,43 @@ export const FILES_STRUCTURE = [
   },
   {
     name: 'Vegetables',
-    type: Types.folder,
+    type: FileSystemItemTypes.folder,
     children: [
       {
         name: 'Green',
-        type: Types.folder,
+        type: FileSystemItemTypes.folder,
         children: [
           {
             name: 'Broccoli',
-            type: Types.file,
+            type: FileSystemItemTypes.file,
           },
           {
             name: 'Brussels',
-            type: Types.file,
+            type: FileSystemItemTypes.file,
           },
           {
             name: 'Brussels',
-            type: Types.file,
+            type: FileSystemItemTypes.file,
           },
         ],
       },
       {
         name: 'Orange',
-        type: Types.folder,
+        type: FileSystemItemTypes.folder,
         children: [
           {
             name: 'Pumpkins',
-            type: Types.file,
+            type: FileSystemItemTypes.file,
           },
           {
             name: 'Carrots',
-            type: Types.file,
+            type: FileSystemItemTypes.file,
           },
         ],
       },
       {
         name: 'Banana',
-        type: Types.file,
+        type: FileSystemItemTypes.file,
       },
     ],
   },

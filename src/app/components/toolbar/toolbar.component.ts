@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {ReadfFileService} from "../../services/readfFile.service";
-import {Folder} from "../../interfaces/Folder";
+import { Component } from '@angular/core';
+import { ReadfFileService } from '../../services/readfFile.service';
+import { Folder } from '../../interfaces/Folder';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,8 +8,9 @@ import {Folder} from "../../interfaces/Folder";
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent {
-  arr!:Folder[]
-  constructor(private readFileService: ReadfFileService ) {
+  arr!: Folder[]
+
+  constructor(private readFileService: ReadfFileService) {
     this.arr = readFileService.readFile();
   }
 

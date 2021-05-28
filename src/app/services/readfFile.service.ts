@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
+import { FILES_STRUCTURE } from '../data';
 
-import {FILES_STRUCTURE} from "../data";
 @Injectable({
   providedIn: 'root'
 })
 export class ReadfFileService {
 
-  readFile(){
+  readFile() {
 
-    return FILES_STRUCTURE
+    return FILES_STRUCTURE;
   }
 }

@@ -1,13 +1,9 @@
-import {Component} from '@angular/core';
-export interface objData{
-  name:string,
-  type:string,
-  children?:objData[]
-}
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {}
+export class AppComponent {
+}

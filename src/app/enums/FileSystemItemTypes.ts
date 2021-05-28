@@ -1,4 +1,4 @@
-export enum Types {
+export enum FileSystemItemTypes {
   folder="folder",
   file="file"
 }
