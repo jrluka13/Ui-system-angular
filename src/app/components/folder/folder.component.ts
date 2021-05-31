@@ -8,7 +8,7 @@ import { Folder } from "../../interfaces/Folder";
 })
 export class FolderComponent {
 
-  @Output() onToggleHandler: EventEmitter<any> = new EventEmitter<any>();
+  @Output() ToggleHandler: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() data!: Folder;
 
   imgFolder: string = '../../assets/folder.png';
@@ -17,7 +17,7 @@ export class FolderComponent {
 
   openFirstFolder() {
     this.isVisible = !this.isVisible;
-    this.onToggleHandler.emit(this.isVisible);
+    this.ToggleHandler.emit(this.isVisible);
   };
 
 }
