@@ -1,0 +1,32 @@
+.list_block{
+  margin: 1rem;
+  color: #e6e3ff;
+
+  .rotate{
+    transform: rotate(270deg);
+  }
+  .mapping{
+    display: none;
+  }
+  .arrow{
+    margin-right: 7px;
+    cursor: pointer;
+
+  }
+
+  .list_block_folder{
+
+  }
+
+  .data{
+    .list_block_file{
+      margin: 10px 53px;
+    }
+    .list_block_file_folder{
+      margin: 10px 10px;
+    }
+  }
+  img{
+    width: 20px;
+  }
+}
