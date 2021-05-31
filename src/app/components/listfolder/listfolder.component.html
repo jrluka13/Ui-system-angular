@@ -1,6 +1,6 @@
 <div class="list_block">
   <ul *ngIf="data.type === folder">
-    <app-folder [data]="data" (onToggleHandler)="changeVisible($event)"></app-folder>
+    <app-folder [data]="data" (ToggleHandler)="changeVisible($event)"></app-folder>
     <app-file [data]="data" [ngClass]="{mapping:isVisible}"></app-file>
   </ul>
 </div>
