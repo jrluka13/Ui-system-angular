@@ -11,14 +11,9 @@ export class ListfolderComponent {
   @Input() data!: Folder;
 
   folder = FileSystemItemTypes.folder;
-  file = FileSystemItemTypes.file;
-  imgFolder: string = '../../assets/folder.png';
-  imgArrow: string = '../../assets/down-arrow.png';
-  imgFile: string = '../../assets/file.png';
   isVisible: boolean = true;
-  toggle: boolean = true;
 
-  openFirstFolder() {
-    this.isVisible = !this.isVisible;
-  }
+  changeVisible(ev: boolean) {
+    this.isVisible = ev;
+  };
 }

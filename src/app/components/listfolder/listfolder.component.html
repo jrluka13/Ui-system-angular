@@ -1,28 +1,6 @@
 <div class="list_block">
   <ul *ngIf="data.type === folder">
-    <li class="folder" >
-      <span class="list_block_folder">
-        <img  [ngClass]="{
-        rotate: isVisible
-        }" class="arrow" [src]="imgArrow" alt="arrow" (click)="openFirstFolder()">
-        <img [src]="imgFolder" alt="folder" >
-        {{data.name}}
-      </span>
-    </li>
-      <li class="data" [ngClass]="{mapping: isVisible}"
-          *ngFor="let l of data.children">
-        <div class="list_block_file_folder" *ngIf="l.type === folder;else elseBlock">
-            <app-listfolder
-               [data]="l"
-            ></app-listfolder>
-        </div>
-        <ng-template #elseBlock>
-          <div class="list_block_file">
-            <img [src]="imgFile" alt="file" >
-            {{l.name}}
-          </div>
-        </ng-template>
-      </li>
-    </ul>
-
+    <app-folder [data]="data" (onToggleHandler)="changeVisible($event)"></app-folder>
+    <app-file [data]="data" [ngClass]="{mapping:isVisible}"></app-file>
+  </ul>
 </div>
