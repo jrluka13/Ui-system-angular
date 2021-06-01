@@ -1,4 +1,4 @@
-import { FileSystemItemTypes } from './enums/FileSystemItemTypes';
+import { FileSystemItemTypes } from './enums/file-system-item-types';
 
 export const FILES_STRUCTURE = [
   {

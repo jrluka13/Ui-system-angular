@@ -1,4 +1,4 @@
-export interface Folder {
+export interface File {
   name: string,
   type: string,
 }

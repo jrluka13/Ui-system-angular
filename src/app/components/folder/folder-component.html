@@ -1,0 +1,13 @@
+<li class='folder'>
+      <span class='list_block_folder'>
+        <img
+          [class.rotate]='isVisible'
+          class='arrow'
+          [src]='imgArrow'
+          alt='arrow'
+          (click)='openFirstFolder()'
+        >
+        <img [src]='imgFolder' alt='folder'>
+        {{ data.name }}
+      </span>
+</li>

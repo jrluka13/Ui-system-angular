@@ -4,9 +4,9 @@ import { FILES_STRUCTURE } from '../data';
 @Injectable({
   providedIn: 'root',
 })
-export class ReadfFileService {
+export class FilesStructureService {
 
-  readFile() {
+  getFilesStructure() {
 
     return FILES_STRUCTURE;
   }
