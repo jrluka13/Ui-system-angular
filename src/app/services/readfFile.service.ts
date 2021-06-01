@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { FILES_STRUCTURE } from '../data';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ReadfFileService {
 
