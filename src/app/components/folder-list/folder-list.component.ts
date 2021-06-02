@@ -3,7 +3,7 @@ import { Folder } from '../../interfaces/folder';
 import { FileSystemItemTypes } from '../../enums/file-system-item-types';
 
 @Component({
-  selector: 'app-listfolder',
+  selector: 'app-folder-list',
   templateUrl: './folder-list.component.html',
   styleUrls: ['./folder-list.component.scss'],
 })

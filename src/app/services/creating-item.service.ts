@@ -1,34 +1,32 @@
 import { Injectable } from '@angular/core';
 import { ModalWindowService } from './modal-window.service';
-import { File } from '../interfaces/file';
 import { Folder } from '../interfaces/folder';
+import { FolderModel } from '../models/folder';
+import { FileModel } from '../models/file';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CreatingItemService {
 
-  constructor(private modal: ModalWindowService) {
+  constructor(private modalWindowService: ModalWindowService) {
   }
 
-  createFile(data: Folder[] | undefined) {
-    let file: File = {
-      name: this.modal.getName('Назовите файл'),
-      type: 'file',
-    };
+  createFile(parent: Folder[] | undefined) {
+    const message = 'Назовите файл';
+    const name = this.modalWindowService.promptWithMessage(message);
+    const file = new FileModel(name);
 
-    if (data)
-      data.push(file);
+    if (parent)
+      parent.push(file.getFile());
   }
 
-  createFolder(data: Folder[] | undefined) {
-    let folder: Folder = {
-      name: this.modal.getName('Назовите папку'),
-      type: 'folder',
-      children: [],
-    };
+  createFolder(parent: Folder[] | undefined) {
+    const message = 'Назовите папку';
+    const name = this.modalWindowService.promptWithMessage(message);
+    const folder = new FolderModel(name);
 
-    if (data)
-      data.push(folder);
+    if (parent)
+      parent.push(folder.getFolder());
   }
 }

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ModalWindowService {
-  getName(str: string) {
+  promptWithMessage(str: string) {
     let name = prompt(str);
 
     return name !== null ? name : '';
