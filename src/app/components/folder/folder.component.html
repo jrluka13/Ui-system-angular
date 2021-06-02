@@ -1,7 +1,7 @@
 <li class="folder">
       <span class="list_block_folder">
         <img
-          [class.rotate]="isVisible"
+          [class.rotate]="isOpened"
           class="arrow"
           [src]="imgArrow"
           alt="arrow"
@@ -11,12 +11,18 @@
           [src]="imgFolder"
           alt="folder"
         >
-        {{ data.name }}
+          {{ data.name }}
       </span>
-  <app-intermediate-layer
-    [data]="data"
-    [isVisible]="isVisible"
-  >
-  </app-intermediate-layer>
+  <ul>
+    <li
+      class="data"
+      *ngFor="let item of data.children">
+        <app-intermediate-layer
+          [data]="item"
+          *ngIf="isOpened"
+        >
+        </app-intermediate-layer>
+    </li>
+  </ul>
 </li>
 

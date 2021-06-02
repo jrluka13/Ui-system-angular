@@ -4,16 +4,15 @@ import { FileSystemItemTypes } from '../../enums/file-system-item-types';
 
 @Component({
   selector: 'app-listfolder',
-  templateUrl: './listfolder.component.html',
-  styleUrls: ['./listfolder.component.scss'],
+  templateUrl: './folder-list.component.html',
+  styleUrls: ['./folder-list.component.scss'],
 })
-export class ListfolderComponent {
+export class FolderListComponent {
   @Input() data!: Folder[];
-
   folder = FileSystemItemTypes.folder;
-  isVisible: boolean = true;
+  isOpened: boolean = true;
 
   changeVisible(ev: boolean) {
-    this.isVisible = ev;
+    this.isOpened = ev;
   };
 }

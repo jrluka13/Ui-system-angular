@@ -13,11 +13,11 @@ export class FolderComponent {
 
   imgFolder: string = '../../assets/folder.png';
   imgArrow: string = '../../assets/down-arrow.png';
-  isVisible: boolean = true;
+  isOpened: boolean = false;
 
   openFirstFolder() {
-    this.isVisible = !this.isVisible;
-    this.ToggleHandler.emit(this.isVisible);
+    this.isOpened = !this.isOpened;
+    this.ToggleHandler.emit(this.isOpened);
   };
 
 }

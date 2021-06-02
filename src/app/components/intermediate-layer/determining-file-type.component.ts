@@ -4,11 +4,10 @@ import { FileSystemItemTypes } from '../../enums/file-system-item-types';
 
 @Component({
   selector: 'app-intermediate-layer',
-  templateUrl: './intermediate-layer.component.html',
-  styleUrls: ['./intermediate-layer.component.scss'],
+  templateUrl: './determining-file-type.html',
+  styleUrls: ['./determining-file-type.component.scss'],
 })
 export class IntermediateLayerComponent {
-  @Input() isVisible!: boolean;
   @Input() data!: Folder;
   folder = FileSystemItemTypes.folder;
   file = FileSystemItemTypes.file;

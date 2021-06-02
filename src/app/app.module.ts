@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { ListfolderComponent } from './components/listfolder/listfolder.component';
+import { FolderListComponent } from './components/listfolder/folder-list.component';
 import { FolderComponent } from './components/folder/folder.component';
 import { FileComponent } from './components/file/file.component';
-import { IntermediateLayerComponent } from './components/intermediate-layer/intermediate-layer.component';
+import { IntermediateLayerComponent } from './components/intermediate-layer/determining-file-type.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    ListfolderComponent,
+    FolderListComponent,
     FolderComponent,
     FileComponent,
     IntermediateLayerComponent,
