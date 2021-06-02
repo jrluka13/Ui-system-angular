@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Folder } from '../../interfaces/folder';
-import { File } from '../../interfaces/file';
+import { CreatingItemService } from '../../services/creating-item.service';
 
 @Component({
   selector: 'app-buttons',
@@ -12,34 +12,14 @@ export class ButtonsComponent {
   imgFolderCreate: string = '../../assets/add_folder.png';
   imgFileCreate: string = '../../assets/add_file.png';
 
-  constructor() {
+  constructor(private creating_item: CreatingItemService) {
   }
 
-  createFile() {
-    let mess = prompt('Назовите файл');
-
-    if (mess !== null) {
-      let file: File = {
-        name: mess,
-        type: 'file',
-      };
-
-      this.data.children?.push(file);
-    }
-
+  addFile() {
+    this.creating_item.createFile(this.data.children);
   }
 
-  createFolder() {
-    let mess = prompt('Назовите папку');
-
-    if (mess !== null) {
-      let folder: Folder = {
-        name: mess,
-        type: 'folder',
-        children: [],
-      };
-
-      this.data.children?.push(folder);
-    }
+  addFolder() {
+    this.creating_item.createFolder(this.data.children);
   }
 }
