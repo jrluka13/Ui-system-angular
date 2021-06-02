@@ -7,6 +7,7 @@ import { FolderListComponent } from './components/listfolder/folder-list.compone
 import { FolderComponent } from './components/folder/folder.component';
 import { FileComponent } from './components/file/file.component';
 import { IntermediateLayerComponent } from './components/intermediate-layer/determining-file-type.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { IntermediateLayerComponent } from './components/intermediate-layer/dete
     FolderComponent,
     FileComponent,
     IntermediateLayerComponent,
+    ButtonsComponent,
   ],
   imports: [
     BrowserModule,
