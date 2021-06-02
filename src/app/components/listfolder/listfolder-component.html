@@ -1,6 +1,5 @@
-<div class='list_block'>
-  <ul *ngIf='data.type === folder'>
-    <app-folder [data]='data' (ToggleHandler)='changeVisible($event)'></app-folder>
-    <app-file [data]='data' [class.mapping]='isVisible'></app-file>
+<div class="list_block">
+  <ul *ngFor="let item of data">
+    <app-folder [data]="item"  (ToggleHandler)="changeVisible($event)"></app-folder>
   </ul>
 </div>

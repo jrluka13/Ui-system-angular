@@ -7,7 +7,6 @@ import { FILES_STRUCTURE } from '../data';
 export class FilesStructureService {
 
   getFilesStructure() {
-
     return FILES_STRUCTURE;
   }
 }

@@ -1,4 +1,4 @@
 export enum FileSystemItemTypes {
-  folder='folder',
-  file='file'
+  folder = 'folder',
+  file = 'file',
 }

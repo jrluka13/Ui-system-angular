@@ -1,0 +1,22 @@
+<ul>
+  <li class="data"
+      *ngFor="let item of data.children">
+    <div
+      class="list_block_file_folder"
+      *ngIf="item.type === folder"
+    >
+      <app-folder
+        [class.mapping]="isVisible"
+        [data]="item"
+      >
+      </app-folder>
+    </div>
+    <div *ngIf="item.type === file">
+      <app-file
+        [data]="item"
+        [class.mapping]="isVisible"
+      >
+      </app-file>
+    </div>
+  </li>
+</ul>

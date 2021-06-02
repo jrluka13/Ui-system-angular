@@ -1,13 +1,22 @@
-<li class='folder'>
-      <span class='list_block_folder'>
+<li class="folder">
+      <span class="list_block_folder">
         <img
-          [class.rotate]='isVisible'
-          class='arrow'
-          [src]='imgArrow'
-          alt='arrow'
-          (click)='openFirstFolder()'
+          [class.rotate]="isVisible"
+          class="arrow"
+          [src]="imgArrow"
+          alt="arrow"
+          (click)="openFirstFolder()"
         >
-        <img [src]='imgFolder' alt='folder'>
+        <img
+          [src]="imgFolder"
+          alt="folder"
+        >
         {{ data.name }}
       </span>
+  <app-intermediate-layer
+    [data]="data"
+    [isVisible]="isVisible"
+  >
+  </app-intermediate-layer>
 </li>
+

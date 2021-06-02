@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Folder } from '../../interfaces/folder';
-import { FileSystemItemTypes } from '../../enums/file-system-item-types';
+import { File } from '../../interfaces/file';
 
 @Component({
   selector: 'app-file',
@@ -8,7 +7,6 @@ import { FileSystemItemTypes } from '../../enums/file-system-item-types';
   styleUrls: ['./file-component.scss'],
 })
 export class FileComponent {
-  @Input() data!: Folder;
+  @Input() data!: File;
   imgFile: string = '../../assets/file.png';
-  folder = FileSystemItemTypes.folder;
 }

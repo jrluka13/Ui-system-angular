@@ -8,7 +8,7 @@ import { FileSystemItemTypes } from '../../enums/file-system-item-types';
   styleUrls: ['./listfolder-component.scss'],
 })
 export class ListfolderComponent {
-  @Input() data!: Folder;
+  @Input() data!: Folder[];
 
   folder = FileSystemItemTypes.folder;
   isVisible: boolean = true;
