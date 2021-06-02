@@ -4,8 +4,8 @@ import { FileSystemItemTypes } from '../../enums/file-system-item-types';
 
 @Component({
   selector: 'app-listfolder',
-  templateUrl: './listfolder-component.html',
-  styleUrls: ['./listfolder-component.scss'],
+  templateUrl: './listfolder.component.html',
+  styleUrls: ['./listfolder.component.scss'],
 })
 export class ListfolderComponent {
   @Input() data!: Folder[];

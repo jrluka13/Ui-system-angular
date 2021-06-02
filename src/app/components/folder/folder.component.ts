@@ -3,8 +3,8 @@ import { Folder } from '../../interfaces/folder';
 
 @Component({
   selector: 'app-folder',
-  templateUrl: './folder-component.html',
-  styleUrls: ['./folder-component.scss'],
+  templateUrl: './folder.component.html',
+  styleUrls: ['./folder.component.scss'],
 })
 export class FolderComponent {
 
