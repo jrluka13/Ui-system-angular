@@ -6,8 +6,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FolderListComponent } from './components/folder-list/folder-list.component';
 import { FolderComponent } from './components/folder/folder.component';
 import { FileComponent } from './components/file/file.component';
-import { IntermediateLayerComponent } from './components/intermediate-layer/determining-file-type.component';
-import { ButtonsComponent } from './components/buttons/buttons.component';
+import { IntermediateLayerComponent } from './components/intermediate-layer/item-types.component';
+import { ButtonsComponent } from './components/buttons/icons-adding-items.component';
 
 @NgModule({
   declarations: [

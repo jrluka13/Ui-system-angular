@@ -4,8 +4,8 @@ import { CreatingItemService } from '../../services/creating-item.service';
 
 @Component({
   selector: 'app-buttons',
-  templateUrl: './buttons.component.html',
-  styleUrls: ['./buttons.component.scss'],
+  templateUrl: './icons-adding-items.component.html',
+  styleUrls: ['./icons-adding-items.component.scss'],
 })
 export class ButtonsComponent {
   @Input() data!: Folder;
