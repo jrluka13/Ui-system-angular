@@ -8,6 +8,10 @@ import { FolderComponent } from './components/folder/folder.component';
 import { FileComponent } from './components/file/file.component';
 import { IntermediateLayerComponent } from './components/intermediate-layer/item-types.component';
 import { ButtonsComponent } from './components/buttons/icons-adding-items.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AppRoutingModule } from './app-routing-module';
+import { AboutComponent } from './components/about/about.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +22,13 @@ import { ButtonsComponent } from './components/buttons/icons-adding-items.compon
     FileComponent,
     IntermediateLayerComponent,
     ButtonsComponent,
+    NavbarComponent,
+    AboutComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
