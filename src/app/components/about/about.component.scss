@@ -1,0 +1,17 @@
+ul{
+    display: flex;
+    justify-content: space-around;
+    li{
+        text-align: center;
+        width: 100%;
+        border: 1px solid black;
+        justify-content: center;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(189, 230, 223);
+        }
+        a{
+            width: 100%;
+        }
+    }
+}

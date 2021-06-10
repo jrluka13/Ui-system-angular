@@ -12,6 +12,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing-module';
 import { AboutComponent } from './components/about/about.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { TechnologiesComponent } from './components/technologies/technologies.component';
+import { EmplooyesComponent } from './components/emplooyes/emplooyes.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     NavbarComponent,
     AboutComponent,
     ContactsComponent,
+    TechnologiesComponent,
+    EmplooyesComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
