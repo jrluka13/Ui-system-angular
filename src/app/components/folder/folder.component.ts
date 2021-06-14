@@ -19,5 +19,4 @@ export class FolderComponent {
     this.isOpened = !this.isOpened;
     this.ToggleHandler.emit(this.isOpened);
   };
-
 }

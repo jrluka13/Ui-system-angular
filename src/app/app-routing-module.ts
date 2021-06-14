@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
@@ -9,17 +9,20 @@ import { ProjectsComponent } from './components/projects/projects.component';
 
 const routes: Routes = [
   { path: '', component: ToolbarComponent },
-  { path: 'about', component: AboutComponent, children:[
-    { path: 'technologies', component: TechnologiesComponent },
-    { path: 'emplooyes', component: EmplooyesComponent },
-    { path: 'projects', component: ProjectsComponent },
-  ] },
+  {
+    path: 'about', component: AboutComponent, children: [
+      { path: 'technologies', component: TechnologiesComponent },
+      { path: 'emplooyes', component: EmplooyesComponent },
+      { path: 'projects', component: ProjectsComponent },
+    ],
+  },
   { path: 'contacts', component: ContactsComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules,
+  })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

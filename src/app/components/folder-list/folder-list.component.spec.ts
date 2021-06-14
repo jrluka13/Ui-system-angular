@@ -1,4 +1,5 @@
 import { FolderListComponent } from './folder-list.component';
+import { FileSystemItemTypes } from '../../enums/file-system-item-types';
 
 describe('FolderListComponent', () => {
   let component: FolderListComponent;
@@ -7,8 +8,8 @@ describe('FolderListComponent', () => {
     component = new FolderListComponent();
 
   });
+
   it('should change isOpened', function () {
-    component.changeVisible(false);
-    expect(component.isOpened).toBeFalsy();
+    expect(component.folder).toBe(FileSystemItemTypes.folder);
   });
 });

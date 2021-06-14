@@ -1,28 +1,31 @@
 <li class="folder">
-      <span class="list_block_folder">
-        <img
-          [class.rotate]="isOpened"
-          class="arrow"
-          [src]="imgArrow"
-          alt="arrow"
-          (click)="openFirstFolder()"
-        >
-        <img
-          [src]="imgFolder"
-          alt="folder"
-        >
-          {{ data.name }}
-        <app-buttons class="icons" [data]="data"></app-buttons>
-      </span>
+  <span class="list_block_folder">
+    <img
+      [class.rotate]="isOpened"
+      class="arrow"
+      [src]="imgArrow"
+      alt="arrow"
+      (click)="openFirstFolder()"
+    >
+
+    <img
+      [src]="imgFolder"
+      alt="folder"
+    >
+
+    {{ data.name }}
+    <app-icons-item class="icons" [data]="data"></app-icons-item>
+  </span>
+
   <ul>
     <li
       class="data"
       *ngFor="let item of data.children">
-        <app-intermediate-layer
-          [data]="item"
-          *ngIf="isOpened"
-        >
-        </app-intermediate-layer>
+      <app-item-types-entities
+        [data]="item"
+        *ngIf="isOpened"
+      >
+      </app-item-types-entities>
     </li>
   </ul>
 </li>

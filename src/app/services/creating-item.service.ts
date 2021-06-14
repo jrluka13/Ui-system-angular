@@ -8,21 +8,20 @@ import { FileModel } from '../models/base-file-system';
   providedIn: 'root',
 })
 export class CreatingItemService {
+  private readonly message = 'Назовите файл';
 
   constructor(private modalWindowService: ModalWindowService) {
   }
 
   createFile(parent: Folder[] | undefined) {
-    const message = 'Назовите файл';
-    const name = this.modalWindowService.promptWithMessage(message);
+    const name = this.modalWindowService.promptWithMessage(this.message);
     const newFile = new FileModel(name);
 
     parent?.push(newFile);
   }
 
   createFolder(parent: Folder[] | undefined) {
-    const message = 'Назовите папку';
-    const name = this.modalWindowService.promptWithMessage(message);
+    const name = this.modalWindowService.promptWithMessage(this.message);
     const newFolder = new FolderModel(name);
 
     parent?.push(newFolder);

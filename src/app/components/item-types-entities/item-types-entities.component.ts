@@ -3,13 +3,11 @@ import { Folder } from '../../interfaces/folder';
 import { FileSystemItemTypes } from '../../enums/file-system-item-types';
 
 @Component({
-  selector: 'app-intermediate-layer',
-  templateUrl: './item-types.html',
-  styleUrls: ['./item-types.component.scss'],
+  selector: 'app-item-types-entities',
+  templateUrl: './item-types-entities.html',
 })
-export class IntermediateLayerComponent {
+export class ItemTypesEntitiesComponent {
   @Input() data!: Folder;
   folder = FileSystemItemTypes.folder;
   file = FileSystemItemTypes.file;
-
 }

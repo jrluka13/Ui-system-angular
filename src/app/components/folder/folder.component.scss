@@ -1,21 +1,27 @@
 .folder {
+
   img {
     width: 20px;
   }
+
   .rotate {
     transform: rotate(270deg);
   }
+
   .arrow {
     margin-right: 7px;
     cursor: pointer;
   }
+
   .data {
     margin: 10px 25px;
+
     img {
       width: 20px;
     }
   }
-  .icons{
+
+  .icons {
     float: right;
   }
 }

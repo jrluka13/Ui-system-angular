@@ -7,10 +7,12 @@ describe('FilesStructureService', () => {
   beforeEach(() => {
     service = new FilesStructureService();
   });
+
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
   it('should return FILES_STRUCTURE', function () {
-    expect(service.getFilesStructure()).toBe(FILES_STRUCTURE);
+    expect(service.getFilesStructure()).toEqual(FILES_STRUCTURE);
   });
 });

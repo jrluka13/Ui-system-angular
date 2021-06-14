@@ -10,9 +10,4 @@ import { FileSystemItemTypes } from '../../enums/file-system-item-types';
 export class FolderListComponent {
   @Input() data!: Folder[];
   folder = FileSystemItemTypes.folder;
-  isOpened: boolean = true;
-
-  changeVisible(ev: boolean) {
-    this.isOpened = ev;
-  };
 }

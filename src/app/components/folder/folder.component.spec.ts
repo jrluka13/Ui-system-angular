@@ -7,10 +7,12 @@ describe('FolderComponent', () => {
     component = new FolderComponent();
 
   });
+
   it('should change isOpened to true', function () {
     component.openFirstFolder();
     expect(component.isOpened).toBeTruthy();
   });
+
   it('should change value by event emitter', () => {
     let result = null;
 

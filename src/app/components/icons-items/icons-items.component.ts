@@ -3,11 +3,11 @@ import { Folder } from '../../interfaces/folder';
 import { CreatingItemService } from '../../services/creating-item.service';
 
 @Component({
-  selector: 'app-buttons',
-  templateUrl: './icons-adding-items.component.html',
-  styleUrls: ['./icons-adding-items.component.scss'],
+  selector: 'app-icons-item',
+  templateUrl: './icons-items.component.html',
+  styleUrls: ['./icons-items.component.scss'],
 })
-export class ButtonsComponent {
+export class IconsItemsComponent {
   @Input() data!: Folder;
   imgFolderCreate: string = '../../assets/add_folder.png';
   imgFileCreate: string = '../../assets/add_file.png';
